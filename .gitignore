@@ -1,0 +1,57 @@
+# ─── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.Python
+.env
+.venv/
+venv/
+ENV/
+env/
+vnev
+
+# ─── FastAPI / Logs ─────────────────────────────────────────────
+*.log
+logs/
+*.db
+*.sqlite3
+
+# ─── Redis / Qdrant (dùng volume nên bỏ nếu mapped local) ───────
+qdrant_data/
+redis_data/
+
+# ─── Docker ─────────────────────────────────────────────────────
+*.pid
+*.pid.lock
+*.tar
+docker-compose.override.yml
+.DS_Store
+
+# ─── VSCode / IDE / Editor ──────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ─── System / OS / Mac / Windows ────────────────────────────────
+*.swp
+*.bak
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Jupyter Notebook (nếu có) ──────────────────────────────────
+.ipynb_checkpoints
+
+# ─── Test / Coverage ────────────────────────────────────────────
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+.cache/
+.nox/
+vnev/
+

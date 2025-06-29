@@ -1,0 +1,38 @@
+mcp_server/
+├── app/
+│   ├── api/
+│   │   ├── deps.py                # Các dependency dùng chung (auth, db...)
+│   │   ├── routes_ask.py          # API xử lý câu hỏi
+│   │   └── __init__.py
+│   │
+│   ├── core/
+│   │   ├── config.py              # Cấu hình chung (env, biến kết nối)
+│   │   └── vector_utils.py        # Hàm tạo embedding (giả hoặc thật)
+│   │
+│   ├── crud/
+│   │   ├── qa.py                  # Xử lý thêm/sửa/tìm trong Qdrant
+│   │   └── chat_history.py        # Ghi & truy vấn từ MongoDB
+│   │
+│   ├── db/
+│   │   ├── mongo.py               # Kết nối MongoDB
+│   │   ├── qdrant.py              # Kết nối Qdrant
+│   │   └── redis_cache.py         # Kết nối Redis
+│   │
+│   ├── models/
+│   │   └── __init__.py            # Nếu bạn dùng ORM như SQLAlchemy
+│   │
+│   ├── schemas/
+│   │   └── qa.py                  # Pydantic models như Question, AnswerOut
+│   │
+│   ├── services/
+│   │   └── ask_service.py         # Logic xử lý chính khi user hỏi
+│   │
+│   ├── main.py                    # Khởi động FastAPI app
+│   └── __init__.py
+│
+├── requirements.txt
+├── .env
+└── docker-compose.yml
+
+
+uvicorn mcp_Server.main:app --reload

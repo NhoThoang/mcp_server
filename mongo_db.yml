@@ -1,0 +1,16 @@
+mongosh -u admin -p admin123 --authenticationDatabase admin
+
+db.createUser({
+  user: "mcp_server",
+  pwd: "km@123456",
+  roles: [ { role: "readWrite", db: "devmcp" } ]
+})
+
+mongosh -u mcp_server -p km@123456 --authenticationDatabase devmcp
+
+
+✅ Xem user trong database hiện tại
+db.getUsers()
+✅ Xem tất cả user trong hệ thống (chạy từ database admin)
+use admin
+db.system.users.find().pretty()
